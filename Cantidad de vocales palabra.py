@@ -4,4 +4,4 @@ for aumento in range(4):
     for letra in cad1:
      if letra in "a e i o u":
         cont += 1
-print("el total es: ", cont)
+print("el total de vocales es: ", cont)
