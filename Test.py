@@ -1,9 +1,9 @@
 Nombre = str(input("Indique su nombre y apellido: "))
 HorasT = int(input("Indique las horas trabajadas: "))
 SueldoB = HorasT * 9500
+SueldoIn = SueldoB
 print("1. Isapre");print("2. Fonasa")
-IsOrFon = int(input("Seleccione un numero"))
-
+IsOrFon = int(input("Seleccione un numero: "))
 if IsOrFon == 1:
     print("1. Mas vida");print("2. Consalud");print("3. Colmena");print("4. Banmedica");print("5. Cruz Blanca");print("6. Vida Tres")
     NumIs = int(input("Seleccione Su Isapre:"))
@@ -31,5 +31,23 @@ if IsOrFon == 1:
         DesIsapre = 32500 * 2.78
         SueldoB= SueldoB - DesIsapre
         Isapre = "Vida Tres"
+elif IsOrFon == 2:
+    fonasa = SueldoIn * (7 / 100)
+    SueldoB -= fonasa
+
 else:
-    SueldoB = SueldoB * 0.93
+    print("Inicie de nuevo el programa")
+
+desAFP = SueldoIn * 0.12
+SueldoB -= desAFP
+DesAFC = SueldoIn * (3 / 100)
+SueldoB -= DesAFC
+print("El Sueldo del Sr/a",Nombre," Es:")
+print("Sueldo Bruto es: ",SueldoIn)
+print("Su Sueldo es: ", SueldoB)
+print("Descuento afp: ", desAFP)
+print("Descuento afc: ", DesAFC)
+if IsOrFon == 1:
+    print("El descuento de isapre es: ",DesIsapre)
+else:
+    print("El descuento de fonasa es:",fonasa )
