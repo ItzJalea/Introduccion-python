@@ -50,4 +50,6 @@ print("Descuento afc: ", DesAFC)
 if IsOrFon == 1:
     print("El descuento de isapre es: ",DesIsapre)
 else:
+    import math
+    fonasa = math.trunc(fonasa)
     print("El descuento de fonasa es:",fonasa )
